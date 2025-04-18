@@ -2,6 +2,6 @@
 
 @implementation MyHeader
 +(void)print:(NSString *)message {
-  NSLog(@"> %@", message);
+  NSLog(@"%@", message);
 }
 @end
