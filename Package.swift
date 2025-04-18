@@ -7,32 +7,25 @@ let package = Package(
     name: "MyApp",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
+        .executable(
             name: "App",
-            type: .dynamic,
             targets: ["App", "Dependency"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
+        .executableTarget(
             name: "App",
             dependencies: ["Dependency"],
             path: "Sources/App",
             publicHeadersPath: ".",
-            linkerSettings: [
-                .linkedFramework("Foundation"),
-            ]
         ),
         .target(
           name: "Dependency",
           dependencies: [],
-          path: "Sources/DependencyHL",
+          path: "Sources/Dependency",
           publicHeadersPath: ".",
-          linkerSettings: [
-            .linkedFramework("Foundation"),
-          ]
         )
     ]
 )
