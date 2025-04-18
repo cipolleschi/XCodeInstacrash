@@ -5,10 +5,11 @@ This is a minimum reproducer for an Xcode instacrash when a Package.swift file p
 ## To reproduce the crash
 1. Create the hard links running this commands (git can't represents hard links, so they have to be created locally):
 ```
+mkdir -p Sources/DependencyHL/Root
 ln ./Sources/Dependency/Root/Subfolder/MyObject.h ./Sources/DependencyHL/Root/MyObject.h
 ln ./Sources/Dependency/Root/Subfolder/MyObject.cpp ./Sources/DependencyHL/Root/MyObject.cpp
 ```
-2. Double click on the Package.swift file to open the project in Xcode
+2. Double click on the `Package.swift` file to open the project in Xcode
 3. press <kbd>⌘</kbd>+<kbd>B</kbd> and observe the project build successfully
 4. Click on one of the linked files in the `DependencyHL` folder and observe Xcode crash.
 
