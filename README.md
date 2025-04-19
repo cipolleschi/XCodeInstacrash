@@ -25,3 +25,6 @@ For example, if a client has to import the `RCTBridge.h`, which is located in th
 Currently, Swift PM does not allow remapping of the headers. So, one possible solution would be to prepare the repository by creating hard links to the original files in a temporary location, and have the `Package.swift` file use that temporary location as source. This would have the benefit that, when a file is modified from the link, the original file get modified as well.
 
 However, this can't be achieved because Xcode crashes as soon as we try to open one of the hard links.
+
+https://github.com/user-attachments/assets/1604b020-3135-4866-a400-42e5e10e07df
+
